@@ -1,0 +1,14 @@
+import 'ICoffee.dart';
+import 'Espresso.dart';
+
+
+class CoffeeFactory {
+  static ICoffee createCoffee(String type) {
+    switch (type) {
+      case '1':
+        return Espresso();
+      default:
+        throw Exception('Неизвестный тип кофе');
+    }
+  }
+}
